@@ -26,10 +26,10 @@ public class Clock {
 			System.out.print("L'ora" +ora+ ":" +minuti+ " è POMERIGGIO");
 		} else if (ora>=18 && ora<=22 && minuti<=59) {
 			System.out.print("L'ora" +ora+ ":" +minuti+ " è SERA");
-		} else if (ora>=23 || ora<=5 && minuti<=59) {
+		} else if (ora==23 || ora<=5 && minuti<=59) {
 			System.out.print("L'ora" +ora+ ":" +minuti+ " è NOTTE");
-		} else if (ora<=-1) {
-			System.out.print("Orario negativo non accettato");
+		} else if (ora>=24) {
+			System.out.print("Fuori orario");
 		}
 		else {
 			System.out.print("Orario Inesistente! Le ore vanno dalle 00 alle 24");
